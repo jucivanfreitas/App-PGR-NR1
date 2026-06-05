@@ -1,0 +1,25 @@
+name: Feature request
+description: Propose an improvement to the stack or template.
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Keep the request focused on template behavior, developer experience or stack contracts.
+  - type: input
+    id: outcome
+    attributes:
+      label: Desired outcome
+      placeholder: What should the template make easier?
+    validations:
+      required: true
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Why it matters
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional notes

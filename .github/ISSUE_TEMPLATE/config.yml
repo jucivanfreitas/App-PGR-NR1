@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Stack docs
+    url: https://github.com/datavisio-tech/ia-firstengine-base-datavisio/blob/main/STACK.md
+    about: Read the stack guide before filing an issue.

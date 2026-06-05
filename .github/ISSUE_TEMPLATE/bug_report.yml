@@ -1,0 +1,34 @@
+name: Bug report
+description: Report a reproducible problem with the stack or template.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for issues that reproduce on the base stack or a fresh fork.
+  - type: input
+    id: version
+    attributes:
+      label: Stack version
+      placeholder: v0.1.0
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: List the smallest reproducible path.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true

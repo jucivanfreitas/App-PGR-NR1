@@ -1,0 +1,49 @@
+name: Release Notes
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: Version tag to publish notes for
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Resolve release tag
+        id: resolve
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ "${GITHUB_EVENT_NAME}" = "workflow_dispatch" ]; then
+            echo "release_tag=${{ inputs.release_tag }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "release_tag=${GITHUB_REF_NAME}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Generate release notes
+        shell: bash
+        run: node scripts/release-notes.mjs "${{ steps.resolve.outputs.release_tag }}" > /tmp/release-notes.md
+
+      - name: Publish release notes
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          tag="${{ steps.resolve.outputs.release_tag }}"
+          if gh release view "$tag" >/dev/null 2>&1; then
+            gh release edit "$tag" --notes-file /tmp/release-notes.md
+          else
+            gh release create "$tag" --notes-file /tmp/release-notes.md --title "$tag"
+          fi
