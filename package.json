@@ -15,6 +15,7 @@
     "test": "vitest run tests/access.test.ts",
     "test:watch": "vitest",
     "test:coverage": "vitest run tests/access.test.ts --coverage",
+    "setup": "node scripts/setup-project.mjs",
     "smoke": "playwright test",
     "healthcheck": "node scripts/healthcheck.js",
     "stack:status": "node scripts/stack-upgrade.mjs status",
