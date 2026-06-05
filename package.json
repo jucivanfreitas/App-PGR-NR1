@@ -16,7 +16,9 @@
     "test:watch": "vitest",
     "test:coverage": "vitest run tests/access.test.ts --coverage",
     "smoke": "playwright test",
-    "healthcheck": "node scripts/healthcheck.js"
+    "healthcheck": "node scripts/healthcheck.js",
+    "stack:status": "node scripts/stack-upgrade.mjs status",
+    "stack:sync": "node scripts/stack-upgrade.mjs sync"
   },
   "dependencies": {
     "@better-auth/drizzle-adapter": "^1.6.11",
