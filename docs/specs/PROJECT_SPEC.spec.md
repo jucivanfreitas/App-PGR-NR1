@@ -1,20 +1,26 @@
-# PROJECT_SPEC.spec
+# Project Spec
 
-Status: draft
+## Objetivo
 
-## Objective
+Definir o contrato base do fork para que qualquer novo projeto parta da mesma fundação de engenharia.
 
-Define the current contract for PROJECT_SPEC in the forked project.
+## Escopo
 
-## Default decision
+- Home de onboarding da stack
+- Dashboard com visão da metodologia e dos agentes padrão
+- Página de descontinuação para `/sign-in`
+- Documentação operacional e de contexto de IA
 
-Keep the first implementation small, server-validated and observable.
+## Diretrizes
 
-## Risks
+- Preservar o nome do app e a estrutura local do fork
+- Evitar redirecionamentos silenciosos quando um módulo for descontinuado
+- Manter a stack explicada em português do Brasil
+- Expor os agentes, skills e dependências de processo por padrão
 
-- Expanding complexity before a concrete use case exists.
-- Trusting client-side state for protected behavior.
+## Critério de aceite
 
-## Next step
-
-Customize this spec before implementing project-specific behavior.
+- O fork inicia com sucesso localmente
+- A home mostra o estado da stack
+- O dashboard mostra a metodologia e o mapa de agentes
+- `/sign-in` informa que foi descontinuado

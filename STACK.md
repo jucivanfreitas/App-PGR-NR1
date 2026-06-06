@@ -1,99 +1,88 @@
-# STACK.md - IA-1stEngine SaaS Base
+# IA-1stEngine Stack
 
-Stack version: `v0.1.9`
-Template release: `bootstrap`
+Versão operacional: `0.1.10`
 
-## Purpose
+## Propósito
 
-This repository is the default DataVisio IA-1stEngine SaaS base. It provides a minimal runnable product shell, governance context, agents, skills and operational rules for new projects.
+Esta stack existe para reduzir atrito de desenvolvimento, organizar o uso de IA com governança e manter forks previsíveis da instalação à operação.
 
-This stack is treated as a versioned product. A fork does not receive updates automatically when the base repository changes.
+## Metodologia
 
-## Framework discipline
+O fluxo oficial é:
 
-- IA-1stEngine is an engineering operating system, not just a prompt collection.
-- Treat `docs/ai-context/` as the persistent memory of the project.
-- Read the relevant `docs/specs/` and `docs/ai-skills/` before changing behavior.
-- Execute in small increments and validate every slice.
-- Use routed agents and specialized skills instead of improvised architecture.
-- Keep runtime governance, rollback and observability in the default path.
-- Record contract changes in `docs/ai-context/CHANGELOG_AI.md` and `docs/ai-context/DECISIONS.md`.
-- Use [docs/ai-context/IA1STENGINE_DISCIPLINE.md](docs/ai-context/IA1STENGINE_DISCIPLINE.md) as the short discipline reference.
+1. `Discovery`
+2. `Planning`
+3. `Implementation`
+4. `Validation`
+5. `Operations`
+6. `Governance`
 
-## Harness Engineering
+Cada etapa produz evidência para a seguinte. Nenhuma mudança deve pular o ciclo de descoberta antes de tocar o código.
 
-- Harness Engineering is the control layer around the stack: context selection, tool access, validation, observability and release gates.
-- The harness is what makes local development, review, deployment and recovery predictable.
-- The home page should show the fork state, current stack version and the next steps after installation.
-- The default `/` route is an onboarding surface, not a generic marketing page.
-- New forks should treat the harness as the default deployment substrate, not as an optional add-on.
-
-## Technical stack
+## Stack principal
 
 - Next.js App Router
 - TypeScript strict
-- React
-- Tailwind CSS v4 with `@tailwindcss/postcss`
-- Better Auth as authentication adapter
-- Drizzle ORM with PostgreSQL
-- Vitest for unit and integration tests
-- Playwright for browser smoke validation
-- Docker for packaging
-- Traefik-compatible labels and examples
-- GitHub Actions for CI and release promotion
-- Development and start scripts bind explicitly to `0.0.0.0:3000` for reliable local access on Windows.
-- The default entry pages use a marketing-plus-onboarding layout so new forks understand the stack, the method and the next actions immediately, in pt-BR.
-- The `.claude/` tree is part of the project context for Claude-based workflows and cloud/deploy guidance.
+- Tailwind CSS
+- Drizzle ORM
+- Better Auth
+- GitHub Actions
+- Docker
+- Traefik
+- Playwright
 
-## Required workflow
+## Entrada para um fork novo
 
-ANALYZE -> SEARCH -> EXECUTE -> TEST -> VALIDATE -> FIX -> RETEST -> DOCUMENT -> CONTINUE
+1. Abrir o fork no GitHub.
+2. Clonar o repositório localmente.
+3. Rodar `npm install`.
+4. Rodar `npm run setup`.
+5. Rodar `npm run stack:status` e `npm run stack:sync` se houver `upstream` configurado.
+6. Validar com `npm run typecheck`, `npm run test` e `npm run build`.
+7. Iniciar com `npm run dev`.
 
-Agents must consult documentation before proposing changes, route through .agents/AGENT_ROUTER.md, and use the selected agent from .github/agents/.
+## Agentes padrão
 
-## Environment model
+- `000-bootstrap.agent.md`
+- `001-ia1st-orchestrator.agent.md`
+- `002-environment-discovery.agent.md`
+- `003-project-discovery.agent.md`
+- `004-business-discovery.agent.md`
+- `005-ui-discovery.agent.md`
+- `006-architecture-discovery.agent.md`
+- `007-data-model-discovery.agent.md`
+- `008-integration-discovery.agent.md`
+- `009-legacy-knowledge-discovery.agent.md`
+- `010-security-discovery.agent.md`
+- `011-infrastructure-discovery.agent.md`
+- `012-quality-discovery.agent.md`
+- `013-modernization-planning.agent.md`
+- `014-target-architecture.agent.md`
+- `015-implementation-orchestrator.agent.md`
+- `016-backend-modernization.agent.md`
+- `017-frontend-modernization.agent.md`
+- `019-integration-modernization.agent.md`
+- `020-test-architecture.agent.md`
+- `021-automated-testing.agent.md`
+- `022-code-review.agent.md`
+- `023-security-review.agent.md`
+- `024-deployment.agent.md`
+- `025-observability.agent.md`
+- `026-performance-optimization.agent.md`
+- `028-governance.agent.md`
+- `infrastructure.agent.md`
+- `saas-base.agent.md`
 
-- DEV: local development and isolated experimentation.
-- HM: homologation for release-candidate validation.
-- PROD: customer-facing production.
+## Skills padrão
 
-HM and PROD must remain isolated by compose project, runtime directory, secrets and public host.
+- `ia-first-engine-discipline`
+- `autonomous-delivery-engine`
+- `failure-recovery-engine`
+- `test-orchestration-engine`
+- `browser-validation`
+- `deployment-runtime-validation`
+- `auth-security`
 
-## Safety rules
+## Observação operacional
 
-- Never commit real secrets, tokens, private keys or production env files.
-- Do not run production deploys without explicit human approval.
-- Migrations must be generated, reviewed and validated before production.
-- Browser validation must inspect the live runtime, not only source code.
-- New domain behavior must update specs, implementation plan, decisions or changelog when it changes operating contracts.
-- The community license is MIT and is intentionally open for reuse.
-
-## Stack versioning
-
-- The stack follows simple versioning: `MAJOR.MINOR.PATCH` for contract changes and template releases.
-- Bump `MAJOR` for breaking stack changes, `MINOR` for compatible stack additions, and `PATCH` for documentation or non-breaking fixes.
-- Every change that alters onboarding, upgrade flow, agent routing, env contracts, CI/CD or release behavior must record the reason in `docs/ai-context/CHANGELOG_AI.md`.
-- The stack version in this file is the reference point for forks, changelog entries and upgrade guidance.
-
-## Fork upgrade model
-
-- New forks start from the current base version.
-- Existing forks do not inherit changes automatically.
-- Fork maintainers should configure an `upstream` remote that points to the DataVisio base repository.
-- Upgrade workflow:
-  1. Review `docs/ai-context/CHANGELOG_AI.md` for the latest stack release notes.
-  2. Run `npm run stack:status` to confirm the local stack version and upstream configuration.
-  3. Run `npm run stack:sync` to fetch the base repository updates.
-  4. Merge or rebase the changes into the fork after reviewing breaking changes.
-  5. Re-run `npm run typecheck`, `npm run test` and `npm run build`.
-- The base repository should be treated as a versioned product, not a live shared code copy.
-
-## First fork checklist
-
-1. Rename package and app display name.
-2. Replace placeholder domains, image names and GitHub environments.
-3. Fill .env.local from .env.example.
-4. Customize docs/specs/PROJECT_SPEC.spec.md.
-5. Configure an `upstream` remote to the DataVisio base repository.
-6. Run `npm install`, `npm run typecheck`, `npm run test`, `npm run build`.
-7. Configure GitHub Environments for HM and production before enabling release promotion.
+`/sign-in` foi descontinuado como entrada principal. A experiência inicial agora é a home e o dashboard da stack.

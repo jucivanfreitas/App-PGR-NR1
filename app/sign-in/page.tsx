@@ -1,59 +1,36 @@
 import Link from "next/link";
-import { ArrowRight, ShieldCheck, Sparkles } from "lucide-react";
-
-const authSteps = [
-  "conectar o provedor Better Auth configurado",
-  "mapear a URL de callback de login para o fork",
-  "validar a fronteira de sessão antes de liberar produção",
-];
 
 export default function SignInPage() {
   return (
-    <main className="container page-shell">
-      <section className="hero compact">
-        <div className="hero-copy">
-          <div className="status-pill">
-            <Sparkles size={14} />
-            Entrada de autenticação
-          </div>
-          <h1>Entrar é um módulo do stack, não o começo da conversa</h1>
-          <p className="hero-text">
-            Esta página existe para ligar a autenticação ao fork já instalado.
-            Depois disso, a dashboard vira a continuidade protegida do fluxo.
-          </p>
-          <div className="hero-actions">
-            <Link className="button" href="/app/dashboard">
-              <ArrowRight size={16} />
-              Continuar para a dashboard
-            </Link>
-            <Link className="button secondary" href="/">
-              Voltar para a home
-            </Link>
-          </div>
+    <main className="mx-auto flex min-h-screen w-full max-w-3xl items-center px-6 py-16 text-slate-100">
+      <section className="w-full rounded-2xl border border-slate-800 bg-slate-950/80 p-8 shadow-2xl shadow-slate-950/40">
+        <p className="text-xs uppercase tracking-[0.3em] text-amber-300">Entrada descontinuada</p>
+        <h1 className="mt-4 text-4xl font-semibold tracking-tight text-white">
+          Página descontinuada
+        </h1>
+        <p className="mt-4 max-w-2xl text-base leading-8 text-slate-300">
+          A base IA-1stEngine não exige esta página como fluxo principal.
+          O acesso inicial agora acontece pela home e pelo dashboard da stack,
+          com a metodologia, os agentes e o fluxo de desenvolvimento já visíveis.
+        </p>
+        <div className="mt-8 flex flex-wrap gap-3">
+          <Link
+            href="/"
+            className="rounded-full border border-slate-700 bg-slate-900 px-4 py-2 text-sm font-medium text-slate-200 transition hover:border-slate-500 hover:bg-slate-800"
+          >
+            Voltar para a home
+          </Link>
+          <Link
+            href="/app/dashboard"
+            className="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-2 text-sm font-medium text-emerald-200 transition hover:bg-emerald-500/20"
+          >
+            Abrir dashboard
+          </Link>
         </div>
-
-        <aside className="hero-panel card">
-          <h2>Checklist de auth</h2>
-          <ul className="stack-list">
-            {authSteps.map((step) => (
-              <li key={step}>{step}</li>
-            ))}
-          </ul>
-          <p className="muted">
-            O stack mantém o wiring de identidade separado do restante do fork.
-          </p>
-        </aside>
-      </section>
-
-      <section className="content-grid">
-        <article className="card">
-          <h2>Fronteira de segurança</h2>
-          <p className="muted">
-            <ShieldCheck size={16} className="inline-icon" />
-            A sessão permanece controlada no servidor. A interface não deve ser
-            a fonte da verdade para estado de autenticação.
-          </p>
-        </article>
+        <div className="mt-8 rounded-xl border border-slate-800 bg-slate-900/70 p-4 text-sm leading-7 text-slate-300">
+          Se o fork precisar de autenticação depois, ela deve ser reinserida como
+          módulo governado e documentado, sem voltar a ocupar a primeira tela.
+        </div>
       </section>
     </main>
   );
