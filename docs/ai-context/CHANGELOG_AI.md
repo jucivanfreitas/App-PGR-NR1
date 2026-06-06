@@ -1,5 +1,10 @@
 # AI Changelog
 
+## v0.1.5 local runtime binding fix
+
+- Bound `npm run dev` and `npm run start` explicitly to `0.0.0.0:3000` so the fork is reachable from Windows localhost without relying on an IPv6-only listener.
+- Switched the healthcheck default target to `http://localhost:3000/api/health` to match the expected local runtime access path.
+
 ## v0.1.4 fork-installed home and harness engineering
 
 - Turned the default `/` route into a fork-installed onboarding screen that confirms success, shows the stack version and leads the user through the next operational steps.

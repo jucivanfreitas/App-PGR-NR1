@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/datavisio-tech/ia-firstengine-base-datavisio/actions/workflows/ci.yml/badge.svg)](https://github.com/datavisio-tech/ia-firstengine-base-datavisio/actions/workflows/ci.yml)
 [![Release Promotion](https://github.com/datavisio-tech/ia-firstengine-base-datavisio/actions/workflows/release-promotion.yml/badge.svg)](https://github.com/datavisio-tech/ia-firstengine-base-datavisio/actions/workflows/release-promotion.yml)
-[![Stack](https://img.shields.io/badge/stack-v0.1.4-blue)](STACK.md)
+[![Stack](https://img.shields.io/badge/stack-v0.1.5-blue)](STACK.md)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
 Public SaaS starter template for DataVisio projects using IA-1stEngine governance and Harness Engineering.
@@ -79,6 +79,8 @@ Then start development mode:
 ```powershell
 npm run dev
 ```
+
+The dev and start scripts bind explicitly to `0.0.0.0` on port `3000` so the fork is reachable from the local machine on Windows.
 
 ## Home onboarding
 

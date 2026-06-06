@@ -1,5 +1,7 @@
 # Decisions
 
+- v0.1.5: The default dev and start scripts must bind to `0.0.0.0:3000` so the local fork is reachable on Windows without depending on an IPv6-only listener.
+- v0.1.5: The local healthcheck should default to `http://localhost:3000/api/health` to match the accessible runtime path.
 - v0.1.4: The default `/` route should act as a fork-installed onboarding screen that confirms the stack state and next steps after installation.
 - v0.1.4: Harness Engineering is the control layer for context, validation, observability and release gates in the base stack.
 - v0.1.3: The README clone flow must start from a GitHub fork, not from the base repository URL directly.
