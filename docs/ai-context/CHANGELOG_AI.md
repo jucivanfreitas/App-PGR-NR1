@@ -1,5 +1,17 @@
 # AI Changelog
 
+## v0.1.8 marketing-first pt-BR stack home
+
+- Reworked the home page into a Portuguese marketing-first experience that explains the framework, the methodology and the value of the stack before the dashboard.
+- Framed IA-1stEngine as a response to the shift from waterfall to agile and then to the AI cost-versus-efficiency problem.
+- Translated the sign-in, subscription and dashboard entry pages to pt-BR so the full first-run path speaks the same product language.
+
+## v0.1.7 marketing-first stack home
+
+- Reframed the default home into a marketing-plus-onboarding experience that explains the framework, the methodology and the next operational steps in pt-BR.
+- Positioned IA-1stEngine as a response to the shift from waterfall to agile and now to AI-driven development, with an explicit story about cost versus efficiency.
+- Aligned the sign-in, subscription and dashboard entry pages to the same Portuguese language and product narrative.
+
 ## v0.1.6 frontend modernization
 
 - Refreshed the default `/` route into a clearer onboarding experience with stack status, next steps, useful documentation links and a secondary dashboard action.

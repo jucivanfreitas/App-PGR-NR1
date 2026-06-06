@@ -11,18 +11,18 @@ import Link from "next/link";
 const stats = [
   {
     label: "Runtime",
-    value: "Healthy",
-    detail: "Local stack is reachable and ready to iterate.",
+    value: "Saudável",
+    detail: "A stack local está acessível e pronta para iteração.",
   },
   {
-    label: "Access",
+    label: "Acesso",
     value: "TRIAL",
-    detail: "Session and subscription gates stay server-side.",
+    detail: "As regras de sessão e assinatura continuam no servidor.",
   },
   {
-    label: "Next module",
+    label: "Próximo módulo",
     value: "Auth + billing",
-    detail: "Customize the next domain after the stack is stable.",
+    detail: "Personalize o próximo domínio depois que a base estiver estável.",
   },
 ];
 
@@ -35,35 +35,35 @@ export default function DashboardPage() {
         <div className="hero-copy">
           <div className="status-pill">
             <LayoutDashboard size={14} />
-            Working dashboard
+            Dashboard operacional
           </div>
-          <h1>Stack dashboard</h1>
+          <h1>Dashboard da stack</h1>
           <p className="hero-text">
-            This is the operational landing zone after onboarding. It is simple
-            on purpose: access state, server scope and the next step are easy
-            to scan.
+            Este é o ponto de continuidade depois do onboarding. A tela é
+            objetiva por design: estado de acesso, escopo do servidor e próximo
+            passo aparecem com clareza.
           </p>
           <div className="hero-actions">
             <Link className="button" href="/">
               <ArrowRight size={16} />
-              Return to onboarding
+              Voltar para a home
             </Link>
             <Link className="button secondary" href="/sign-in">
-              Sign in flow
+              Fluxo de entrada
             </Link>
           </div>
         </div>
 
         <aside className="hero-panel card">
-          <h2>Current status</h2>
+          <h2>Status atual</h2>
           <div className="module-list">
             <div className="module-item">
-              <strong>Access state</strong>
+              <strong>Estado de acesso</strong>
               <p className="muted">{access}</p>
             </div>
             <div className="module-item">
-              <strong>Owner scope</strong>
-              <p className="muted">Resolved server-side</p>
+              <strong>Escopo do owner</strong>
+              <p className="muted">Resolvido no servidor</p>
             </div>
           </div>
         </aside>
@@ -81,26 +81,27 @@ export default function DashboardPage() {
 
       <section className="content-grid">
         <article className="card">
-          <h2>What is next</h2>
+          <h2>O que vem depois</h2>
           <p className="muted">
             <Sparkles size={16} className="inline-icon" />
-            Customize project specs, then wire auth and billing to the real
-            product rules.
+            Personalize as especificações do projeto e depois conecte auth e
+            billing às regras reais do produto.
           </p>
         </article>
         <article className="card">
-          <h2>Data boundary</h2>
+          <h2>Fronteira de dados</h2>
           <p className="muted">
             <Database size={16} className="inline-icon" />
-            Keep your domain data separate from the stack memory and build on
-            top of the base contracts only.
+            Mantenha os dados de domínio separados da memória da stack e
+            construa em cima dos contratos base.
           </p>
         </article>
         <article className="card">
-          <h2>Security boundary</h2>
+          <h2>Fronteira de segurança</h2>
           <p className="muted">
             <ShieldCheck size={16} className="inline-icon" />
-            Treat access, ownership and commercial state as server decisions.
+            Acesso, ownership e estado comercial devem continuar sendo decisões
+            do servidor.
           </p>
         </article>
       </section>

@@ -1,5 +1,11 @@
 # Decisions
 
+- v0.1.8: The default home should present the stack as a Portuguese marketing narrative before the first operational action.
+- v0.1.8: The stack story should explicitly connect waterfall, agile and AI-era engineering in the first-run experience.
+- v0.1.8: The initial onboarding flow should stay consistent in pt-BR across home, sign-in, subscription and dashboard pages.
+- v0.1.7: The default home should sell the framework and its methodology in pt-BR, not just explain installation mechanics.
+- v0.1.7: The stack narrative should explicitly connect the waterfall crisis, the agile response and the new AI engineering gap around cost versus efficiency.
+- v0.1.7: The sign-in, subscription and dashboard entry pages should stay in pt-BR and match the same product story as the home.
 - v0.1.6: The default entry pages should use a modern onboarding layout that makes the stack state and next steps obvious on first load.
 - v0.1.6: Sign-in, subscription and dashboard pages should share the same stack-first language and visual rhythm as the home onboarding screen.
 - v0.1.6: Next dev must allow `localhost` and `127.0.0.1` as dev origins so browser validation reaches the local runtime on Windows.

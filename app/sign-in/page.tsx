@@ -2,9 +2,9 @@ import Link from "next/link";
 import { ArrowRight, ShieldCheck, Sparkles } from "lucide-react";
 
 const authSteps = [
-  "connect the configured Better Auth provider",
-  "map the sign-in callback URL for your fork",
-  "verify the session boundary before enabling production access",
+  "conectar o provedor Better Auth configurado",
+  "mapear a URL de callback de login para o fork",
+  "validar a fronteira de sessão antes de liberar produção",
 ];
 
 export default function SignInPage() {
@@ -14,45 +14,44 @@ export default function SignInPage() {
         <div className="hero-copy">
           <div className="status-pill">
             <Sparkles size={14} />
-            Auth entry
+            Entrada de autenticação
           </div>
-          <h1>Sign in is the first module, not the first question</h1>
+          <h1>Entrar é um módulo do stack, não o começo da conversa</h1>
           <p className="hero-text">
-            This page is the auth entry for a fork that already has the stack
-            installed. Connect the provider, then use the dashboard as the
-            secured continuation path.
+            Esta página existe para ligar a autenticação ao fork já instalado.
+            Depois disso, a dashboard vira a continuidade protegida do fluxo.
           </p>
           <div className="hero-actions">
             <Link className="button" href="/app/dashboard">
-              Continue to dashboard
               <ArrowRight size={16} />
+              Continuar para a dashboard
             </Link>
             <Link className="button secondary" href="/">
-              Back to onboarding
+              Voltar para a home
             </Link>
           </div>
         </div>
 
         <aside className="hero-panel card">
-          <h2>Auth checklist</h2>
+          <h2>Checklist de auth</h2>
           <ul className="stack-list">
             {authSteps.map((step) => (
               <li key={step}>{step}</li>
             ))}
           </ul>
           <p className="muted">
-            The stack keeps identity wiring isolated from the rest of the fork.
+            O stack mantém o wiring de identidade separado do restante do fork.
           </p>
         </aside>
       </section>
 
       <section className="content-grid">
         <article className="card">
-          <h2>Security boundary</h2>
+          <h2>Fronteira de segurança</h2>
           <p className="muted">
             <ShieldCheck size={16} className="inline-icon" />
-            Session handling stays server-side. The UI should never become the
-            source of truth for auth state.
+            A sessão permanece controlada no servidor. A interface não deve ser
+            a fonte da verdade para estado de autenticação.
           </p>
         </article>
       </section>

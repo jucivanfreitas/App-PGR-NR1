@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/datavisio-tech/ia-firstengine-base-datavisio/actions/workflows/ci.yml/badge.svg)](https://github.com/datavisio-tech/ia-firstengine-base-datavisio/actions/workflows/ci.yml)
 [![Release Promotion](https://github.com/datavisio-tech/ia-firstengine-base-datavisio/actions/workflows/release-promotion.yml/badge.svg)](https://github.com/datavisio-tech/ia-firstengine-base-datavisio/actions/workflows/release-promotion.yml)
-[![Stack](https://img.shields.io/badge/stack-v0.1.6-blue)](STACK.md)
+[![Stack](https://img.shields.io/badge/stack-v0.1.8-blue)](STACK.md)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
 Public SaaS starter template for DataVisio projects using IA-1stEngine governance and Harness Engineering.
@@ -84,7 +84,7 @@ The dev and start scripts bind explicitly to `0.0.0.0` on port `3000` so the for
 
 ## Home onboarding
 
-The default `/` route is an onboarding screen for fresh forks. It confirms the fork was installed, shows the stack version, explains the next operational steps and keeps the dashboard as a secondary action.
+The default `/` route is now a marketing and onboarding screen for fresh forks. It explains why the framework exists, shows the stack version, and keeps the dashboard as a secondary action.
 
 ## Upgrade helper
 

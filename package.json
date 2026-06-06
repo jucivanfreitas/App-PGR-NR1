@@ -1,6 +1,6 @@
 {
   "name": "ia-firstengine-base-datavisio",
-  "version": "0.1.6",
+  "version": "0.1.8",
   "private": true,
   "engines": {
     "node": ">=20 <25",

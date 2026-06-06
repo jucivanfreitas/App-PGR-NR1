@@ -17,44 +17,45 @@ export default function SubscribePage() {
         <div className="hero-copy">
           <div className="status-pill">
             <BadgeCheck size={14} />
-            Commercial access gate
+            Gate de acesso comercial
           </div>
-          <h1>Subscription is a controlled step, not a blocker</h1>
+          <h1>Assinatura é uma etapa controlada, não um bloqueio</h1>
           <p className="hero-text">
-            Use this route when a user needs to move from the onboarding flow to
-            a commercial or trial state. The access state remains server-side.
+            Use esta rota quando o usuário precisar sair do onboarding e entrar
+            em um estado comercial ou de trial. A decisão de acesso continua no
+            servidor.
           </p>
           <div className="hero-actions">
             <Link className="button" href="/app/dashboard">
-              Open dashboard
               <ArrowRight size={16} />
+              Abrir dashboard
             </Link>
             <Link className="button secondary" href="/">
-              Back to onboarding
+              Voltar para a home
             </Link>
           </div>
         </div>
 
         <aside className="hero-panel card">
-          <h2>Access states</h2>
+          <h2>Estados de acesso</h2>
           <ul className="stack-list">
             {accessStates.map((state) => (
               <li key={state}>{state}</li>
             ))}
           </ul>
           <p className="muted">
-            The UI should show the state clearly, then move the user forward.
+            A interface deve mostrar o estado com clareza e seguir o fluxo.
           </p>
         </aside>
       </section>
 
       <section className="content-grid">
         <article className="card">
-          <h2>Runtime rule</h2>
+          <h2>Regra de runtime</h2>
           <p className="muted">
             <ShieldCheck size={16} className="inline-icon" />
-            Commercial access is enforced server-side and should not be hidden
-            behind a generic landing page.
+            O acesso comercial é aplicado no servidor e não deve ficar escondido
+            atrás de uma landing genérica.
           </p>
         </article>
       </section>

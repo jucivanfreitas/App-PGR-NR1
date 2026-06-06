@@ -123,6 +123,14 @@ p {
   line-height: 1.6;
 }
 
+.marketing-hero .hero-copy {
+  padding-top: 20px;
+}
+
+.marketing-hero h1 {
+  max-width: 12ch;
+}
+
 .eyebrow {
   margin: 0 0 8px;
   font-size: 0.78rem;
@@ -230,6 +238,10 @@ p {
   margin-bottom: 8px;
 }
 
+.module-item p:last-child {
+  margin-bottom: 0;
+}
+
 .muted {
   color: var(--muted);
   line-height: 1.6;
@@ -277,10 +289,18 @@ p {
   font-weight: 600;
 }
 
+.dashboard-hero .hero-copy {
+  padding-top: 18px;
+}
+
 @media (max-width: 860px) {
   .hero,
   .hero.compact {
     grid-template-columns: 1fr;
+  }
+
+  .marketing-hero h1 {
+    max-width: none;
   }
 
   .hero-copy {
