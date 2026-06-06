@@ -1,5 +1,7 @@
 # Decisions
 
+- v0.1.9: The repository should expose a `.claude/` tree for Claude-based workflows, with project context and cloud/deploy guidance.
+- v0.1.9: The README should link to `.claude/CLAUDE.md` and `.claude/cloud.md` so the additional workflow entry point is visible to new contributors.
 - v0.1.8: The default home should present the stack as a Portuguese marketing narrative before the first operational action.
 - v0.1.8: The stack story should explicitly connect waterfall, agile and AI-era engineering in the first-run experience.
 - v0.1.8: The initial onboarding flow should stay consistent in pt-BR across home, sign-in, subscription and dashboard pages.

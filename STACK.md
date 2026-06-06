@@ -1,6 +1,6 @@
 # STACK.md - IA-1stEngine SaaS Base
 
-Stack version: `v0.1.8`
+Stack version: `v0.1.9`
 Template release: `bootstrap`
 
 ## Purpose
@@ -43,6 +43,7 @@ This stack is treated as a versioned product. A fork does not receive updates au
 - GitHub Actions for CI and release promotion
 - Development and start scripts bind explicitly to `0.0.0.0:3000` for reliable local access on Windows.
 - The default entry pages use a marketing-plus-onboarding layout so new forks understand the stack, the method and the next actions immediately, in pt-BR.
+- The `.claude/` tree is part of the project context for Claude-based workflows and cloud/deploy guidance.
 
 ## Required workflow
 

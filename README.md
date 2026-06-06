@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/datavisio-tech/ia-firstengine-base-datavisio/actions/workflows/ci.yml/badge.svg)](https://github.com/datavisio-tech/ia-firstengine-base-datavisio/actions/workflows/ci.yml)
 [![Release Promotion](https://github.com/datavisio-tech/ia-firstengine-base-datavisio/actions/workflows/release-promotion.yml/badge.svg)](https://github.com/datavisio-tech/ia-firstengine-base-datavisio/actions/workflows/release-promotion.yml)
-[![Stack](https://img.shields.io/badge/stack-v0.1.8-blue)](STACK.md)
+[![Stack](https://img.shields.io/badge/stack-v0.1.9-blue)](STACK.md)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
 Public SaaS starter template for DataVisio projects using IA-1stEngine governance and Harness Engineering.
@@ -10,6 +10,8 @@ Public SaaS starter template for DataVisio projects using IA-1stEngine governanc
 License: MIT, open for community and commercial use.
 
 Start with [STACK.md](STACK.md), then customize [docs/specs/PROJECT_SPEC.spec.md](docs/specs/PROJECT_SPEC.spec.md) before adding domain features.
+
+For Claude-based workflows, start with [.claude/CLAUDE.md](.claude/CLAUDE.md) and [.claude/cloud.md](.claude/cloud.md).
 
 ## Clone and open
 

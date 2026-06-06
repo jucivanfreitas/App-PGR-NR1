@@ -1,5 +1,11 @@
 # AI Changelog
 
+## v0.1.9 claude context and cloud guidance
+
+- Added a `.claude/` tree with project context and cloud/deploy guidance for Claude-based workflows.
+- Linked the README to `.claude/CLAUDE.md` and `.claude/cloud.md` so the repo exposes the additional operational context directly.
+- Promoted the stack version because the project context contract now includes a new documented entry point for automation and deploy guidance.
+
 ## v0.1.8 marketing-first pt-BR stack home
 
 - Reworked the home page into a Portuguese marketing-first experience that explains the framework, the methodology and the value of the stack before the dashboard.
