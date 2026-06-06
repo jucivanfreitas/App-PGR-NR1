@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/datavisio-tech/ia-firstengine-base-datavisio/actions/workflows/ci.yml/badge.svg)](https://github.com/datavisio-tech/ia-firstengine-base-datavisio/actions/workflows/ci.yml)
 [![Release Promotion](https://github.com/datavisio-tech/ia-firstengine-base-datavisio/actions/workflows/release-promotion.yml/badge.svg)](https://github.com/datavisio-tech/ia-firstengine-base-datavisio/actions/workflows/release-promotion.yml)
-[![Stack](https://img.shields.io/badge/stack-v0.1.2-blue)](STACK.md)
+[![Stack](https://img.shields.io/badge/stack-v0.1.3-blue)](STACK.md)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
 Public SaaS starter template for DataVisio projects using IA-1stEngine governance.
@@ -13,16 +13,25 @@ Start with [STACK.md](STACK.md), then customize [docs/specs/PROJECT_SPEC.spec.md
 
 ## Clone and open
 
-In PowerShell, create a new project from the base repository:
+First create a fork of this repository on GitHub:
+
+1. Open `https://github.com/datavisio-tech/ia-firstengine-base-datavisio`.
+2. Click `Fork`.
+3. Choose your account or organization.
+4. Keep or edit the repository name for your new project.
+
+Then clone your fork locally in PowerShell. `cd` must point to a local folder on your machine where the implementation will live:
 
 ```powershell
 cd C:\Users\juciv\OneDrive\Devdatavisio\Saas
-git clone https://github.com/datavisio-tech/ia-firstengine-base-datavisio.git App-PGR-NR1
-cd App-PGR-NR1
+git clone https://github.com/<your-user-or-org>/<your-fork-repo>.git <your-app-folder>
+cd <your-app-folder>
 code .
 ```
 
 Open the folder in VS Code, then use the terminal integrated in the editor.
+
+Replace `<your-app-folder>` with the application name you want to use locally.
 
 ## Versioned stack
 

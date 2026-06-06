@@ -1,5 +1,9 @@
 # Decisions
 
+- v0.1.3: The README clone flow must start from a GitHub fork, not from the base repository URL directly.
+- v0.1.3: The local `cd` step must point to the machine implementation folder and the application folder name should be chosen by the user.
+- v0.1.2: The README clone flow must start from a GitHub fork, not from the base repository URL directly.
+- v0.1.2: The local `cd` step must point to the machine implementation folder and the application folder name should be chosen by the user.
 - v0.1.2: The base template should expose the clone/open instructions directly in the README for users starting from VS Code.
 - v0.1.2: The quick start flow should be wrapped in `npm run stack:ia-firstengine` so a fresh fork can bootstrap and validate itself without guessing the command order.
 - v0.1.2: The quick start helper should end with an explicit `npm run dev` handoff for the first interactive run.

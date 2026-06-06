@@ -1,5 +1,15 @@
 # AI Changelog
 
+## v0.1.3 fork-first clone guide
+
+- Rewrote the README clone instructions to require a GitHub fork first, then a clone from the user's fork.
+- Clarified that `cd` must point to the local implementation folder on the machine and that the application folder name is chosen by the user.
+
+## v0.1.2 fork-first clone guide
+
+- Rewrote the README clone instructions to require a GitHub fork first, then a clone from the user's fork.
+- Clarified that `cd` must point to the local implementation folder on the machine and that the application folder name is chosen by the user.
+
 ## v0.1.2 quick start clone and bootstrap helper
 
 - Extended the README with a visible clone/open recipe for new users starting the stack in VS Code.
