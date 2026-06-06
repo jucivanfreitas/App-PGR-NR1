@@ -2,10 +2,10 @@
 
 [![CI](https://github.com/datavisio-tech/ia-firstengine-base-datavisio/actions/workflows/ci.yml/badge.svg)](https://github.com/datavisio-tech/ia-firstengine-base-datavisio/actions/workflows/ci.yml)
 [![Release Promotion](https://github.com/datavisio-tech/ia-firstengine-base-datavisio/actions/workflows/release-promotion.yml/badge.svg)](https://github.com/datavisio-tech/ia-firstengine-base-datavisio/actions/workflows/release-promotion.yml)
-[![Stack](https://img.shields.io/badge/stack-v0.1.3-blue)](STACK.md)
+[![Stack](https://img.shields.io/badge/stack-v0.1.4-blue)](STACK.md)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
-Public SaaS starter template for DataVisio projects using IA-1stEngine governance.
+Public SaaS starter template for DataVisio projects using IA-1stEngine governance and Harness Engineering.
 
 License: MIT, open for community and commercial use.
 
@@ -79,6 +79,10 @@ Then start development mode:
 ```powershell
 npm run dev
 ```
+
+## Home onboarding
+
+The default `/` route is an onboarding screen for fresh forks. It confirms the fork was installed, shows the stack version, and links to the next operational steps instead of leading with the dashboard.
 
 ## Upgrade helper
 

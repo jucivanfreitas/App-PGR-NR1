@@ -1,6 +1,6 @@
 # STACK.md - IA-1stEngine SaaS Base
 
-Stack version: `v0.1.3`
+Stack version: `v0.1.4`
 Template release: `bootstrap`
 
 ## Purpose
@@ -19,6 +19,14 @@ This stack is treated as a versioned product. A fork does not receive updates au
 - Keep runtime governance, rollback and observability in the default path.
 - Record contract changes in `docs/ai-context/CHANGELOG_AI.md` and `docs/ai-context/DECISIONS.md`.
 - Use [docs/ai-context/IA1STENGINE_DISCIPLINE.md](docs/ai-context/IA1STENGINE_DISCIPLINE.md) as the short discipline reference.
+
+## Harness Engineering
+
+- Harness Engineering is the control layer around the stack: context selection, tool access, validation, observability and release gates.
+- The harness is what makes local development, review, deployment and recovery predictable.
+- The home page should show the fork state, current stack version and the next steps after installation.
+- The default `/` route is an onboarding surface, not a generic marketing page.
+- New forks should treat the harness as the default deployment substrate, not as an optional add-on.
 
 ## Technical stack
 

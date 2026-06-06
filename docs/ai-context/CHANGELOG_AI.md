@@ -1,5 +1,11 @@
 # AI Changelog
 
+## v0.1.4 fork-installed home and harness engineering
+
+- Turned the default `/` route into a fork-installed onboarding screen that confirms success, shows the stack version and leads the user through the next operational steps.
+- Added Harness Engineering guidance to the stack as the control layer for context, validation, observability and release gates.
+- Recut the README so the base repo explains the onboarding home and the same stack contract that fresh forks now see at runtime.
+
 ## v0.1.3 fork-first clone guide
 
 - Rewrote the README clone instructions to require a GitHub fork first, then a clone from the user's fork.

@@ -10,3 +10,5 @@ a { color: inherit; }
 .button { display: inline-flex; align-items: center; border-radius: 6px; border: 1px solid #1f6feb; background: #1f6feb; color: white; padding: 10px 14px; text-decoration: none; font-weight: 600; }
 .button.secondary { background: white; color: #1f6feb; }
 .muted { color: #5f6b7a; }
+.stack-list, .stack-links { margin: 0; padding-left: 18px; }
+.stack-list li + li, .stack-links li + li { margin-top: 8px; }

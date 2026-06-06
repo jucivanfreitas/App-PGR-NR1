@@ -1,5 +1,7 @@
 # Decisions
 
+- v0.1.4: The default `/` route should act as a fork-installed onboarding screen that confirms the stack state and next steps after installation.
+- v0.1.4: Harness Engineering is the control layer for context, validation, observability and release gates in the base stack.
 - v0.1.3: The README clone flow must start from a GitHub fork, not from the base repository URL directly.
 - v0.1.3: The local `cd` step must point to the machine implementation folder and the application folder name should be chosen by the user.
 - v0.1.2: The README clone flow must start from a GitHub fork, not from the base repository URL directly.
